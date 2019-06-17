@@ -1,0 +1,44 @@
+//minimum create placeholders for links, images, nav items.
+
+%link {
+    transition: transform .5s cubic-bezier(.56, -0.45, .45, 1.46);
+    &:hover {
+        transform: skewX(-15deg);
+        color: $primary-color;
+    }
+    &:target {
+        color: $primary-color-dk;
+    }
+}
+
+%img {
+    padding: 10px;
+}
+
+%nav {
+    &:nth-child(1),
+    &:nth-child(1) a,
+    &:hover,
+    &:hover a {
+        background-color: $primary-color;
+        color: white;
+    }
+}
+
+%btn {
+    height: 45px;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    margin: 10px 0;
+    border: none;
+}
+
+
+// %clearfix {
+//     &::after {
+//     content: "";
+//     display: table;
+//     clear: both;
+//     }
+// }

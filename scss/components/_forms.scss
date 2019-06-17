@@ -1,0 +1,17 @@
+    .form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .form__label--hidden {
+        display: none;
+    }
+    .form__input {
+        height: 45px;
+        margin: 0 10px 10px;
+        @include prime-edge (bottom);
+        &::placeholder {
+            padding-left: 15px;
+            font-size: .8em;
+        }
+    }

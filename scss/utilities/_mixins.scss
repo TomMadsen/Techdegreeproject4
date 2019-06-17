@@ -1,0 +1,45 @@
+//minimum create mixins for Media Queries and Flexbox settings.
+
+@mixin mq($break) {
+
+    @if $break=='sm' {
+        @media (max-width: $break-sm) {
+            @content;
+        }
+    } 
+    @else if $break=='med' {
+        @media (min-width: $break-med) {
+            @content;
+        }
+    }
+    @else if $break=='lg' {
+        @media (min-width: $break-lg) {
+            @content;
+        }
+    }
+}
+
+@mixin flexy {
+    display: flex;
+    flex-wrap: wrap;
+    @content;
+}
+
+@mixin b-rad {
+    border-radius: 5px;
+}
+
+@mixin button-primary {
+    @extend %btn;
+    @content;
+    @include mq(med) {
+        width: auto;
+        flex-basis: 16%;
+        margin-right: 3%;
+    }
+}
+
+@mixin prime-edge ($value) {
+    border: none;
+    border-#{$value}: 5px $primary-color solid;
+}

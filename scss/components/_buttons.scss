@@ -1,0 +1,50 @@
+.btn--default {
+    @extend %btn;
+    &[type="submit"] {
+    background-color: $secondary-color;
+    }
+    &:not([type="submit"]){
+        @include button-primary;
+    }
+}
+.btn--success {
+    @include button-primary;
+}
+.btn--error {
+    @include button-primary;
+}
+.btn--warning {
+    @include button-primary;
+}
+.btn--info {
+    @include button-primary;
+}
+//theme colors
+.theme__colors {
+    @include b-rad;
+    @for $i from 1 through 12 {
+        &:nth-of-type(#{$i}) {
+            background-color: adjust-hue($primary-color, $i * 15);
+        }
+    }
+
+    @for $i from 1 through 12 {
+        &.grid__col--#{$i} {
+            background-color: lighten(adjust-hue($primary-color, $i * 100), 15);
+            color: darken($grey, 20);
+            height: 45px;
+            color: inherit;
+            text-transform: lowercase;
+            
+            @include mq(sm) {
+                @include flexy {
+                    flex-direction: column;
+                    flex-basis: auto;
+                    justify-content: center;
+                }
+                margin: 0 0 5px;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,20 @@
+//fonts
+
+$font-stack-primary: 'Helvetica Neue', 'Trebuchet MS', sans-serif;
+$font-stack-secondary: Arial, Helvetica, sans-serif;
+
+// colors
+
+$primary-color: #30cfa8;
+$secondary-color: adjust-hue($primary-color, 25);
+$primary-color-lt: lighten($primary-color, 15);
+$primary-color-dk: darken($primary-color, 30);
+$grey: #888888;
+
+//breakpoints
+
+$break-sm: 768px;
+$break-med: 768px;
+$break-lg: 912px;
+
+
