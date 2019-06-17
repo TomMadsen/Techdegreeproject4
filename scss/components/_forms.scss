@@ -2,6 +2,9 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
+        @include mq(med) {
+            width: 90%;
+        }
     }
     .form__label--hidden {
         display: none;

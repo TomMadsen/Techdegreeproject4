@@ -75,3 +75,11 @@
 .centered {
   margin: auto;
 }
+
+.grid__col--6 {
+  @include mq(sm) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

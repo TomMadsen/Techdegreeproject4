@@ -6,12 +6,17 @@
     }
     &--frame {
         @extend %img;
-        width: 100%;
+        width: 95%;
         border: 1px $grey solid;
+        @include mq(sm) {
+            width: 90%;
+            margin: 0 auto;
+        }
+        
     }
     &--avatar {
-        width: 150px;
-        height: 150px;
+        width: 160px;
+        height: 160px;
         margin: 15px auto;
         display: block;
     }
